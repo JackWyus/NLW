@@ -8,6 +8,7 @@
     --headline: #212529;
     --paragraph: #495057;
     --brand-beige: #FFFAF1;
+    --brand-green: #DCE9E2;
 
     font-size: 100%;
 }
@@ -16,7 +17,7 @@ body{
     font-family:'Red Hat Mono', monospace;
     text-align: center;
 
-    background-color: #111519;
+    background-color: #121921;
 }
 
 header{
@@ -72,15 +73,15 @@ button{
     color: #FFFFFF;
 }
 
-img{
+header img{
+    display: block;
     width: 17.625rem;
+    object-position: center;
 }
 
 .containerMaster{
     width: 20.45rem;
     height: 29rem;
-    margin-top: -0.1875rem;
-
     display: flex;
     flex-direction: column; /*Orientar a centralização em forma de coluna*/
     align-items: center;
@@ -93,16 +94,29 @@ img{
     background-color: var(--brand-beige);
 }
 
-.containerMaster-container-Child h3{
+.containerMaster-containerChild h3{
     font-size: 3rem;
     line-height: 130%;
 
     color: var(--headline);
 }
 
-.containerMaster-container-Child p{
+.containerMaster-containerChild p{
     font-size: 1rem;
     line-height: 150%;
 
     color: var(--primary-color);
+}
+
+header::before{
+    content: '';
+    width: 100vw;
+    height: 70.3rem;
+    display: block;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: var(--brand-green);
 }
