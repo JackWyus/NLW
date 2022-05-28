@@ -7,6 +7,7 @@
     --primary-color: #00856F;
     --headline: #212529;
     --paragraph: #495057;
+    --brand-beige: #FFFAF1;
 
     font-size: 100%;
 }
@@ -14,7 +15,8 @@
 body{
     font-family:'Red Hat Mono', monospace;
     text-align: center;
-    background-color:#2e3c4c;
+
+    background-color: #111519;
 }
 
 header{
@@ -40,7 +42,7 @@ h1{
     color: var(--headline);
 }
 
-p{
+#texto-introducao{
     font-size: 1.125rem;
     line-height: 150%;
     font-weight: 400;
@@ -61,88 +63,46 @@ button{
     font-size: 0.83rem; /* Tamanho da fonte*/
     font-weight: 550;
     text-transform: uppercase; /*Colocando tudo em maiusculo*/
-    color: #FFFFFF;
+    
     display: flex; /*O dispaly flex vai alterar os filhos*/
     align-items: center; /*A linha os item de forma centralizada*/
     justify-content: center; /*Centraliza o elemento em relação as suas dimensões,top,bottom,right e left*/
     gap: 1.10875rem;/*Espaçamento entro os elementos*/
+    
+    color: #FFFFFF;
 }
 
 img{
     width: 17.625rem;
 }
 
-.box{
+.containerMaster{
     width: 20.45rem;
     height: 29rem;
     margin-top: -0.1875rem;
-    display: block;
-    background-color: #FFFAF1;
-}
 
-/*------- Estilização das tags h3 da box -------*/
-
-.box h3:nth-of-type(1){
-    width: 10.4375rem;
-    height: 3.875rem;
-    /*padding-top: 2rem;*/
     display: flex;
+    flex-direction: column; /*Orientar a centralização em forma de coluna*/
     align-items: center;
     justify-content: center;
+    gap: 4rem;
 
-    font-size: 3rem;
-    
+    border: solid rgb(250, 242, 242);
+    border-radius: 1rem;
+
+    background-color: var(--brand-beige);
 }
 
-.box h3:nth-of-type(2){
-    width: 5rem;
-    height: 3.875rem;
-    margin-top: 3.75rem;
+.containerMaster-container-Child h3{
     font-size: 3rem;
-    
+    line-height: 130%;
 
+    color: var(--headline);
 }
 
-.box h3:nth-of-type(3){
-    width: 5rem;
-    height: 3.875rem;
-    margin-top: 3.75rem;
-    font-size: 3rem;
-    
-
-
-}
-
-/*------- Fim da Estilização  -------*/
-
-
-/*------- Estilização das tags p da box -------*/
-
-.box p:nth-of-type(1){
-    width: 11rem;
-    height: 1.5rem;
+.containerMaster-container-Child p{
     font-size: 1rem;
-    margin-top: 0.25rem;
+    line-height: 150%;
 
     color: var(--primary-color);
 }
-
-.box p:nth-of-type(2){
-    width: 15rem;
-    height: 1.5rem;
-    font-size: 1rem;
-    margin-top: 0.25rem;
-
-    color: var(--primary-color);
-}
-
-.box p:nth-of-type(3){
-    width: 12rem;
-    height: 1.5rem;
-    font-size: 1rem;
-    margin-top: 0.25rem;
-
-    color: var(--primary-color);
-}
-
-/*------- Fim da Estilização  -------*/
