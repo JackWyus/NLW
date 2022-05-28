@@ -22,11 +22,12 @@ header{
     margin: 0 auto;
     height: 67.5rem;
     margin-top: 2.8125rem;
-    padding: 0 2.5rem;
+    padding: 0 0.5rem;
     border: 1px solid red;
 }
 
 h4{
+    margin-top: 2.5rem;
     margin-bottom: 1rem;
     font-size: 0.875rem; /* 1rem é igual a 16px do navegador quando o font-size for 100%*/
     color: var(--primary-color);
@@ -72,8 +73,76 @@ img{
 }
 
 .box{
-    width: 20.4375rem;
-    height: 29.375rem;
+    width: 20.45rem;
+    height: 29rem;
+    margin-top: -0.1875rem;
     display: block;
     background-color: #FFFAF1;
 }
+
+/*------- Estilização das tags h3 da box -------*/
+
+.box h3:nth-of-type(1){
+    width: 10.4375rem;
+    height: 3.875rem;
+    /*padding-top: 2rem;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 3rem;
+    
+}
+
+.box h3:nth-of-type(2){
+    width: 5rem;
+    height: 3.875rem;
+    margin-top: 3.75rem;
+    font-size: 3rem;
+    
+
+}
+
+.box h3:nth-of-type(3){
+    width: 5rem;
+    height: 3.875rem;
+    margin-top: 3.75rem;
+    font-size: 3rem;
+    
+
+
+}
+
+/*------- Fim da Estilização  -------*/
+
+
+/*------- Estilização das tags p da box -------*/
+
+.box p:nth-of-type(1){
+    width: 11rem;
+    height: 1.5rem;
+    font-size: 1rem;
+    margin-top: 0.25rem;
+
+    color: var(--primary-color);
+}
+
+.box p:nth-of-type(2){
+    width: 15rem;
+    height: 1.5rem;
+    font-size: 1rem;
+    margin-top: 0.25rem;
+
+    color: var(--primary-color);
+}
+
+.box p:nth-of-type(3){
+    width: 12rem;
+    height: 1.5rem;
+    font-size: 1rem;
+    margin-top: 0.25rem;
+
+    color: var(--primary-color);
+}
+
+/*------- Fim da Estilização  -------*/
