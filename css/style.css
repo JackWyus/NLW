@@ -1,0 +1,79 @@
+*{
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary-color: #00856F;
+    --headline: #212529;
+    --paragraph: #495057;
+
+    font-size: 100%;
+}
+
+body{
+    font-family:'Red Hat Mono', monospace;
+    text-align: center;
+    background-color:#2e3c4c;
+}
+
+header{
+    width: 23.4375rem;
+    margin: 0 auto;
+    height: 67.5rem;
+    margin-top: 2.8125rem;
+    padding: 0 2.5rem;
+    border: 1px solid red;
+}
+
+h4{
+    margin-bottom: 1rem;
+    font-size: 0.875rem; /* 1rem é igual a 16px do navegador quando o font-size for 100%*/
+    color: var(--primary-color);
+}
+
+h1{
+    font-size: 2.125rem;
+    line-height: 130%;
+    margin-bottom: 1.5rem;
+    color: var(--headline);
+}
+
+p{
+    font-size: 1.125rem;
+    line-height: 150%;
+    font-weight: 400;
+    margin-bottom: 2rem;
+
+    color: var(--paragraph);
+}
+
+button{
+    width: 16.4375rem;
+    height: 3.25rem;
+    padding: 1rem 2rem 1rem 2rem;
+    margin-bottom: 3.75rem;
+    border: none;
+    border-radius: 2.5rem;
+    background: var(--primary-color);
+
+    font-size: 0.83rem; /* Tamanho da fonte*/
+    font-weight: 550;
+    text-transform: uppercase; /*Colocando tudo em maiusculo*/
+    color: #FFFFFF;
+    display: flex; /*O dispaly flex vai alterar os filhos*/
+    align-items: center; /*A linha os item de forma centralizada*/
+    justify-content: center; /*Centraliza o elemento em relação as suas dimensões,top,bottom,right e left*/
+    gap: 1.10875rem;/*Espaçamento entro os elementos*/
+}
+
+img{
+    width: 17.625rem;
+}
+
+.box{
+    width: 20.4375rem;
+    height: 29.375rem;
+    display: block;
+    background-color: #FFFAF1;
+}
