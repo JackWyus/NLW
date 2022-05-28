@@ -9,7 +9,6 @@
     --paragraph: #495057;
     --brand-beige: #FFFAF1;
     --brand-green: #DCE9E2;
-
     font-size: 100%;
 }
 
@@ -20,19 +19,12 @@ body{
     background-color: #121921;
 }
 
-header,.menuHorizontal{
-    width: 23.4375rem;
-    height: 4.5rem;
-    padding: 0 0.5rem;
-}
-
 
 /*<------------------------------->HEADER<------------------------------->*/
 header::before{
     content: '';
     width: 100vw;
     height: 68rem;
-    display: block;
 
     position: absolute;
     top: 0;
@@ -43,8 +35,9 @@ header::before{
 
 header{  
     margin: 0 auto;
-    height: 67.5rem;
-    border: solid 1px red;
+    width: 23.4375rem;
+    height: 67.5rem; 
+    padding: 0rem 0.5rem 0rem 0.5rem;
 }
 
 header h4{
@@ -130,14 +123,12 @@ header img{
 
 /*<------------------------------->NAV<------------------------------->*/
 
-.menuHorizontal{
-   display: flex;
-   align-items: center;
-   justify-content: space-between; 
-   background-color: aqua;
-   padding: 1.68rem 0rem 1.68rem 1.5rem;
-   position: fixed;
-   top: 0;
-   left: 50%;
-   transform: translateX(-50%);/*Centralizando o menu*/
+nav{
+    /*width: 23.4375rem;*/
+    height: 4.5rem;
+    padding: 0rem 0.5rem 0rem 0.5rem;
+    
+    display: flex;
+    
 }
+
