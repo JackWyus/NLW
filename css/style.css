@@ -124,7 +124,7 @@ header img{
 
 nav{
     width: 100vw;
-    max-width: 26.4375rem;
+    
     height: 4.5rem;
     display: flex;
     align-items: center;
@@ -134,7 +134,7 @@ nav{
 }
 
 .containerLogo{
-    margin-left: 1rem;
+    margin-left: 2rem;
 }
 
 .containerHamburgue{
