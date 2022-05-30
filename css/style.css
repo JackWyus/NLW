@@ -1,142 +1,79 @@
 *{
-    margin: 0 auto;
+    margin: 0;
     box-sizing: border-box;
+    
 }
 
 :root{
+    font-size: 62.5%; /*1rem = 10px - dessa forma, não existe uma grande necessidade de fazer calculos de conversão*/
+
     --primary-color: #00856F;
-    --headline: #212529;
+    --secondary-color: #212529;
     --paragraph: #495057;
     --brand-beige: #FFFAF1;
     --brand-green: #DCE9E2;
-    --nav-height: 4.5rem;
-    font-size: 100%;
 }
 
 body{
-    font-family:'Red Hat Mono', monospace;
+    font-size: 1.6rem;
     text-align: center;
-
-    background-color: #121921;
 }
 
-/*<------------------------------->HEADER<------------------------------->*/
-header::before{
-    content: '';
-    width: 100vw;
-    height: 68rem;
-
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    background-color: var(--brand-green);
+header{
+    width: 37.5rem;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 4.1rem;
 }
 
-header{  
-    width: 23.4375rem;
-    height: 67.5rem; 
-    padding: 0rem 0.5rem 0rem 0.5rem;
-}
-
-header h4{
-    margin-top: 2.5rem;
-    margin-bottom: 1rem;
-    font-size: 0.875rem; /* 1rem é igual a 16px do navegador quando o font-size for 100%*/
+h4{
     color: var(--primary-color);
+
+    font-size: 1.4rem;
+    margin-bottom: 1.6rem;
 }
 
-header h1{
-    font-size: 2.125rem;
+h1{
+    color: var(--secondary-color);
+
+    margin-bottom: 2.4rem;
+    font-size: 3.4rem;
     line-height: 130%;
-    margin-bottom: 1.5rem;
-    color: var(--headline);
 }
 
-#texto-introducao{
-    font-size: 1.125rem;
+p{
+    color: var(--paragraph);
+
+    margin-bottom: 3.2rem;
+    font-size: 1.8rem;
     line-height: 150%;
     font-weight: 400;
-    margin-bottom: 2rem;
-
-    color: var(--paragraph);
 }
 
-header button{
-    width: 16.4375rem;
-    height: 3.25rem;
-    padding: 1rem 2rem 1rem 2rem;
-    margin-bottom: 3.75rem;
-    border: none;
-    border-radius: 2.5rem;
-    background: var(--primary-color);
+button{
+    background-color: var(--primary-color);
 
-    font-size: 0.83rem; /* Tamanho da fonte*/
-    font-weight: 550;
-    text-transform: uppercase; /*Colocando tudo em maiusculo*/
+    width: 26.3rem;
+    height: 6.2rem;
+    margin-bottom: 6rem;
+    border: none;
+    border-radius: 4rem;
     
-    display: flex; /*O dispaly flex vai alterar os filhos*/
-    align-items: center; /*A linha os item de forma centralizada*/
-    justify-content: center; /*Centraliza o elemento em relação as suas dimensões,top,bottom,right e left*/
-    gap: 1.10875rem;/*Espaçamento entro os elementos*/
-    
-    color: #FFFFFF;
+    color: #ffff;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    font-weight: 700;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.6rem;
+
+    margin-right: auto;
+    margin-left: auto;
 }
 
 header img{
-    display: block;
-    width: 17.625rem;
-    object-position: center;
-}
-
-.containerMaster{
-    width: 20.45rem;
-    height: 29rem;
-    display: flex;
-    flex-direction: column; /*Orientar a centralização em forma de coluna*/
-    align-items: center;
-    justify-content: center;
-    gap: 4rem;
-
-    border: solid rgb(250, 242, 242);
-    border-radius: 1rem;
-
-    background-color: var(--brand-beige);
-}
-
-.containerMaster-containerChild h3{
-    font-size: 3rem;
-    line-height: 130%;
-
-    color: var(--headline);
-}
-
-.containerMaster-containerChild p{
-    font-size: 1rem;
-    line-height: 150%;
-
-    color: var(--primary-color);
-}
-
-/*<------------------------------->FIM HEADER<------------------------------->*/
-
-/*<------------------------------->NAV<------------------------------->*/
-
-nav{
-    width: 100vw;
-    
-    height: 4.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-radius: 0rem 0rem 0.5rem 0.5rem;
-    background-color: #00856F;
-}
-
-.containerLogo{
-    margin-left: 2rem;
-}
-
-.containerHamburgue{
-    margin-right: 1rem;
+    width: 26.1rem;
+    height: 34rem;
 }
