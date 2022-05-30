@@ -20,7 +20,17 @@ body{
     font-family: "DM Sans";
 }
 
+.wrapper{
+    width: 37.5rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+
 /*<------------------------------->HEADER<------------------------------->*/
+
+header{
+    margin-top: 4.1rem;
+}
 
 header::before{
     background-color: var(--brand-green);
@@ -33,13 +43,6 @@ header::before{
     top: 0;
     left: 0;
     z-index: -1;
-}
-
-header{
-    width: 37.5rem;
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 4.1rem;
 }
 
 header h4{
@@ -133,6 +136,12 @@ header img{
     line-height: 150%;
 }
 
-
-
 /*<------------------------------->FIM HEADER<------------------------------->*/
+
+nav{
+    padding: 1.6rem 2.4rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
