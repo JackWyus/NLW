@@ -9,6 +9,7 @@
     --paragraph: #495057;
     --brand-beige: #FFFAF1;
     --brand-green: #DCE9E2;
+    --nav-height: 4.5rem;
     font-size: 100%;
 }
 
@@ -23,7 +24,7 @@ body{
 /*<------------------------------->HEADER<------------------------------->*/
 header::before{
     content: '';
-    width: 100vw;
+    width: 100%;
     height: 68rem;
 
     position: absolute;
@@ -34,10 +35,10 @@ header::before{
 }
 
 header{  
-    margin: 0 auto;
     width: 23.4375rem;
     height: 67.5rem; 
     padding: 0rem 0.5rem 0rem 0.5rem;
+    border: solid 1px black;
 }
 
 header h4{
@@ -124,11 +125,27 @@ header img{
 /*<------------------------------->NAV<------------------------------->*/
 
 nav{
-    /*width: 23.4375rem;*/
-    height: 4.5rem;
+    width: 23.4375rem;
+    height: 4.25rem;
     padding: 0rem 0.5rem 0rem 0.5rem;
     
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border: solid 1px red;
+}
+
+.containerLogo{
+    margin-left: 0rem;
+}
+
+.containerHamburgue{
+    margin-right: 0rem;
+}
+
+.containerHamburgue svg{
     
 }
+
 
