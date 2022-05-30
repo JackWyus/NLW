@@ -20,11 +20,10 @@ body{
     background-color: #121921;
 }
 
-
 /*<------------------------------->HEADER<------------------------------->*/
 header::before{
     content: '';
-    width: 100%;
+    width: 100vw;
     height: 68rem;
 
     position: absolute;
@@ -38,7 +37,6 @@ header{
     width: 23.4375rem;
     height: 67.5rem; 
     padding: 0rem 0.5rem 0rem 0.5rem;
-    border: solid 1px black;
 }
 
 header h4{
@@ -125,27 +123,20 @@ header img{
 /*<------------------------------->NAV<------------------------------->*/
 
 nav{
-    width: 23.4375rem;
-    height: 4.25rem;
-    padding: 0rem 0.5rem 0rem 0.5rem;
-    
+    width: 100vw;
+    max-width: 26.4375rem;
+    height: 4.5rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    border: solid 1px red;
+    border-radius: 0rem 0rem 0.5rem 0.5rem;
+    background-color: #00856F;
 }
 
 .containerLogo{
-    margin-left: 0rem;
+    margin-left: 1rem;
 }
 
 .containerHamburgue{
-    margin-right: 0rem;
+    margin-right: 1rem;
 }
-
-.containerHamburgue svg{
-    
-}
-
-
