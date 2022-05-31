@@ -12,10 +12,12 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Red+Hat+Mono:wght@300&display=swap" rel="stylesheet">
 
   </head>
-  <body onscroll="onScroll()" > <!--onscroll é um evento que é ativado quando ocorre uma rolagem no navegador-->
+  <body onscroll="onScroll()" class=""> <!--onscroll é um evento que é ativado quando ocorre uma rolagem no navegador-->
 
     <nav id="navigation" class="">
+
       <div class="wrapper">
+
         <a class="logo" href="#">
           <svg 
             width="133" height="18" viewBox="0 0 133 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -30,12 +32,37 @@
             <path d="M111.319 17.088V5.184H114.055L114.343 7.416C114.775 6.648 115.359 6.04 116.095 5.592C116.847 5.128 117.727 4.896 118.735 4.896V8.136H117.871C117.199 8.136 116.599 8.24 116.071 8.448C115.543 8.656 115.127 9.016 114.823 9.528C114.535 10.04 114.391 10.752 114.391 11.664V17.088H111.319Z" fill="#00856F"/>
             <path d="M126.888 17.376C125.688 17.376 124.624 17.12 123.696 16.608C122.768 16.096 122.04 15.376 121.512 14.448C120.984 13.52 120.72 12.448 120.72 11.232C120.72 10 120.976 8.904 121.488 7.944C122.016 6.984 122.736 6.24 123.648 5.712C124.576 5.168 125.664 4.896 126.912 4.896C128.08 4.896 129.112 5.152 130.008 5.664C130.904 6.176 131.6 6.88 132.096 7.776C132.608 8.656 132.864 9.64 132.864 10.728C132.864 10.904 132.856 11.088 132.84 11.28C132.84 11.472 132.832 11.672 132.816 11.88H123.768C123.832 12.808 124.152 13.536 124.728 14.064C125.32 14.592 126.032 14.856 126.864 14.856C127.488 14.856 128.008 14.72 128.424 14.448C128.856 14.16 129.176 13.792 129.384 13.344H132.504C132.28 14.096 131.904 14.784 131.376 15.408C130.864 16.016 130.224 16.496 129.456 16.848C128.704 17.2 127.848 17.376 126.888 17.376ZM126.912 7.392C126.16 7.392 125.496 7.608 124.92 8.04C124.344 8.456 123.976 9.096 123.816 9.96H129.744C129.696 9.176 129.408 8.552 128.88 8.088C128.352 7.624 127.696 7.392 126.912 7.392Z" fill="#00856F"/>
           </svg>
-        </a>
-  
-        <i class="fa-solid fa-bars"></i>
-      </div>
+        </a><!--logo-->
 
-    </nav>
+        <div class="menu">
+
+          <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Serviços</a></li>
+            <li><a href="#">Sobre</a></li>
+          </ul>
+
+          <a class="menu-button-whatsapp" href="#">Agende sua Consulta</a>
+
+          <ul class="menu-social-links">
+            <li><a href="#" target="_blank"><i class="fa-brands fa-instagram"></a></i></li>
+            <li><a href="#" target="_blank"><i class="fa-brands fa-facebook-f"></a></i></li>
+            <li><a href="#" target="_blank"><i class="fa-brands fa-youtube"></a></i></li>
+          </ul><!--menu-social-links-->
+
+        </div><!--menu-->
+
+        <button onclick="openMenu()" class="menu-open">
+          <i class="fa-solid fa-bars"></i>
+        </button><!--menu-open-->
+
+        <button onclick="closeMenu()" class="menu-close">
+          <i class="fa-solid fa-xmark close-icon"></i>
+        </button><!--menu-close-->
+  
+      </div><!--wrapper-->
+
+    </nav><!--navigation-->
 
     <header class="wrapper">
       <h4>Boas-Vindas a DOCTORCARE</h4>

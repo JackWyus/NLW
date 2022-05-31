@@ -1,8 +1,22 @@
 
-
-
+/*Função responsável por selecionar o elemento html e adicionar a class de nome 'scroll' para que possa ser adicionado no css as devidas propriedades*/          
+ /*A função vai verificar se 'scrollY' é maior que zero, se sim, ela vai adicionar a classList 'scroll' no html, se não, ela remove a classList 'scroll' - scrollY vai retornar(number) a posição da scroll no eixo y*/
 function onScroll(){
-    document.querySelector('#navigation').classList.add('scroll')            
+    if(scrollY > 0){
+        document.querySelector('#navigation').classList.add('scroll')  
+    }
+    else{
+        document.querySelector('#navigation').classList.remove('scroll')  
+    }
+}
+    
+
+// Menu funções 
+
+function openMenu(){
+  document.querySelector('body').classList.add('menu-expanded')
 }
 
- //scrollY vai retornar(number) a posição da scroll no eixo y
+function closeMenu(){
+    document.querySelector('body').classList.remove('menu-expanded')
+}
