@@ -1,7 +1,6 @@
 *{
     margin: 0;
     box-sizing: border-box;
-    
 }
 
 :root{
@@ -12,6 +11,9 @@
     --paragraph: #495057;
     --brand-beige: #FFFAF1;
     --brand-green: #DCE9E2;
+    --color-white:#ffff;
+
+    --nav-height: 7.2rem; /*Queremos que o margin-top some com o height do elemento nav para que ocorra uma harmonização de posições devido ao position fixed atráves do calc(),no qual fará sozinho os respectivos cálculos para que isso ocorra.*/
 }
 
 body{
@@ -22,14 +24,14 @@ body{
 
 .wrapper{
     width: 37.5rem;
-    margin-right: auto;
-    margin-left: auto;
+    margin-inline: auto;
+    padding-inline: 2.4rem;
 }
 
 /*<------------------------------->HEADER<------------------------------->*/
 
 header{
-    margin-top: 4.1rem;
+    margin-top: calc(4.1rem + var(--nav-height)); /*Queremos que o margin-top some com o height do elemento nav para que ocorra uma harmonização de posições devido ao position fixed atráves do calc(),no qual fará sozinho os respectivos cálculos para que isso ocorra.*/
 }
 
 header::before{
@@ -37,7 +39,7 @@ header::before{
 
     content: '';
     width: 100vw;
-    height: 108rem;
+    height: calc(108rem + var(--nav-height)); /*Precisamos fazer um cálculo da altura novamente devido alterarmos as dimensões do nav position fixed em relação ao margin-top, o conteúdo foi empurrado para baixo alterando a posição do 108rem - ela vai voltar a ficar no meio da div */
 
     position: absolute;
     top: 0;
@@ -101,7 +103,7 @@ header img{
     object-position: center;
 }
 
-.stats{
+div.stats{
     background-color: var(--brand-beige);
     
     width: 32.7rem;
@@ -120,7 +122,7 @@ header img{
     padding-top: 4rem;
 }
 
-.stat h3{
+div.stat h3{
     color: var(--secondary-color);
     
     font-size: 4.8rem;
@@ -128,7 +130,7 @@ header img{
     margin-bottom: 0.4rem;
 }
 
-.stat p{
+div.stat p{
     color: var(--primary-color);
     
     margin: 0;
@@ -139,9 +141,35 @@ header img{
 /*<------------------------------->FIM HEADER<------------------------------->*/
 
 nav{
-    padding: 1.6rem 2.4rem;
+    height: var(--nav-height);/*Vamos transformar isso(height: 7.2rem) em uma variável*/
 
+    display: flex;
+
+    position: fixed;
+    top: 0;
+    /*Podemos centralizar um elemento da seguinte forma no caso do position fixed*/
+    left: 50%;
+    transform: translateX(-50%);
+    /*Fim */
+}
+
+nav .wrapper{
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+nav.scroll{
+    background-color: var(--primary-color);
+
+    width: 100vw;
+}
+
+nav.scroll svg:nth-child(1) path{
+    fill: var(--color-white);
+}
+
+/*Cor branca do menu e seus derivados relacioandos a icones e texto*/
+nav.scroll i{
+    color: var(--color-white);
 }
