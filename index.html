@@ -12,10 +12,10 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Red+Hat+Mono:wght@300&display=swap" rel="stylesheet">
 
   </head>
-  <body onscroll="onScroll()" class=""> <!--onscroll é um evento que é ativado quando ocorre uma rolagem no navegador-->
+  <body onscroll="onScroll()"> <!--onscroll é um evento que é ativado quando ocorre uma rolagem no navegador-->
 
     <!--navigation-->
-    <nav id="navigation" class="">
+    <nav id="navigation">
 
       <div class="wrapper">
 
@@ -67,40 +67,45 @@
     <!--navigation-->
 
     <!-- Header - wrapper -->
-    <header id="home" class="wrapper">
-      <h4>Boas-Vindas a DOCTORCARE</h4>
-      <h1>Assistência médica simplificada para todos</h1>
-      <p>
-        Os médicos da DoctorCare vão além dos sintomas para tratar a causa raiz
-        de sua doença e proporcionar uma cura a longo prazo
-      </p>
-      <button>
-        <i class="fa-brands fa-whatsapp"></i>
-        Agende sua Consulta
-      </button>
+    <header id="home" >
 
-      <img
-        src="./assets/women.png"
-        alt="Mulher negra vestindo moletom verde sorrindo"
-      />
+      <div class="wrapper">
 
-      <div class="stats">
-        <div class="stat">
-          <h3>+3.500</h3>
-          <p>Pacientes atendidos</p>
+        <h4>Boas-Vindas a DOCTORCARE</h4>
+        <h1>Assistência médica simplificada para todos</h1>
+        <p>
+         Os médicos da DoctorCare vão além dos sintomas para tratar a causa raiz
+         de sua doença e proporcionar uma cura a longo prazo
+       </p>
+       <button>
+          <i class="fa-brands fa-whatsapp"></i>
+          Agende sua Consulta
+       </button>
+
+        <img
+         src="./assets/women.png"
+          alt="Mulher negra vestindo moletom verde sorrindo"
+       />
+
+        <div class="stats">
+          <div class="stat">
+            <h3>+3.500</h3>
+            <p>Pacientes atendidos</p>
+          </div>
+
+          <div class="stat">
+            <h3>+15</h3>
+            <p>Especialistas disponíveis</p>
+          </div>
+
+          <div class="stat">
+             <h3>+10</h3>
+            <p>Anos no mercado</p>
+          </div>
         </div>
+        <!--stats-->
 
-        <div class="stat">
-          <h3>+15</h3>
-          <p>Especialistas disponíveis</p>
-        </div>
-
-        <div class="stat">
-          <h3>+10</h3>
-          <p>Anos no mercado</p>
-        </div>
       </div>
-      <!--stats-->
     </header>
     <!-- Header - wrapper -->
     
@@ -163,6 +168,8 @@
     </section>
     <!-- Section - services -->
 
+    <!--ScrollReveal Lib-->
+    <script src="https://unpkg.com/scrollreveal"></script>
     <script src="./js/main.js"></script>
   </body>
 </html>

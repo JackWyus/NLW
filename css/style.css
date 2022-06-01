@@ -171,9 +171,7 @@ section {
 /*<------------------------------->Ínicio Nav<------------------------------->*/
 
 nav {
-  height: var(
-    --nav-height
-  ); /*Vamos transformar isso(height: 7.2rem) em uma variável*/
+  height: var(--nav-height); /*Vamos transformar isso(height: 7.2rem) em uma variável*/
 
   display: flex;
 
@@ -182,7 +180,7 @@ nav {
   /*Podemos centralizar um elemento da seguinte forma no caso do position fixed*/
   left: 50%;
   transform: translateX(-50%);
-  /*Fim */
+  z-index: 100; 
 }
 
 nav .wrapper {
@@ -225,7 +223,8 @@ body.menu-expanded {
 
 body.menu-expanded > :not(nav) {
   /*Vamos pegar todos os filhos do primeiro nível exceto a tag nav e vamos aplicar o display none para sumir tudo*/
-  display: none;
+  /* display: none; */
+  visibility: hidden;
 }
 
 .menu,
@@ -246,6 +245,7 @@ body.menu-expanded .menu-close {
     transform: translateY(100%); /*Vamos jogar o menu primeiramente no eixo y para fora da tela e depois vamos chamar ele para seu estado original*/
 }
 
+
 body.menu-expanded .menu {
   background-color: var(--primary-color);
 
@@ -261,6 +261,7 @@ body.menu-expanded .menu {
   transition: transform 350ms; /*fazer a aparição do menu de forma suave e com um tempo*/
   transform: translateY(0%);  /*Chamando o menu para seu estado original */
 }
+
 
 body.menu-expanded nav {
   position: relative;
@@ -330,6 +331,8 @@ body.menu-expanded button {
 
 /*<------------------------------->Section - Services <------------------------------->*/
 #services header h4 {
+    color: var(--primary-color);
+
   margin-bottom: 1.6rem;
 
   font-size: 1.4rem;

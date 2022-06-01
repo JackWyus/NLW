@@ -20,3 +20,12 @@ function openMenu(){
 function closeMenu(){
     document.querySelector('body').classList.remove('menu-expanded')
 }
+
+
+/* ScrollReveal lib*/
+
+ScrollReveal({
+    origin: 'top',//Ele vai começar a agir com a biblioteca no top - de cima para baixo
+    distance: '30px',
+    duration: 700,
+}).reveal("#home, #home img, #home .stats, #services, #services header, #services .card");
