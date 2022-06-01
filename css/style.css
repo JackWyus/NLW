@@ -224,7 +224,6 @@ body.menu-expanded {
 body.menu-expanded > :not(nav) {
   /*Vamos pegar todos os filhos do primeiro nível exceto a tag nav e vamos aplicar o display none para sumir tudo*/
   /* display: none; */
-  visibility: hidden;
 }
 
 .menu,
