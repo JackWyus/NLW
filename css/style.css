@@ -1,359 +1,371 @@
 /*Geral*/
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-:root{
-    font-size: 62.5%; /*1rem = 10px - dessa forma, não existe uma grande necessidade de fazer calculos de conversão*/
+:root {
+  font-size: 62.5%; /*1rem = 10px - dessa forma, não existe uma grande necessidade de fazer calculos de conversão*/
 
-    --primary-color: #00856F;
-    --secondary-color: #212529;
-    --paragraph: #495057;
-    --brand-beige: #FFFAF1;
-    --brand-green-light: #F7F9F9;
-    --brand-green: #DCE9E2;
-    --color-white: #ffff;
-    
+  --primary-color: #00856f;
+  --secondary-color: #212529;
+  --paragraph: #495057;
+  --brand-beige: #fffaf1;
+  --brand-green-light: #f7f9f9;
+  --brand-green: #dce9e2;
+  --color-white: #ffff;
 
-    --nav-height: 7.2rem; /*Queremos que o margin-top some com o height do elemento nav para que ocorra uma harmonização de posições devido ao position fixed atráves do calc(),no qual fará sozinho os respectivos cálculos para que isso ocorra.*/
+  --nav-height: 7.2rem; /*Queremos que o margin-top some com o height do elemento nav para que ocorra uma harmonização de posições devido ao position fixed atráves do calc(),no qual fará sozinho os respectivos cálculos para que isso ocorra.*/
 }
 
-html,body{
-    width: 100%;
-    height: 100%;
+html {
+  scroll-behavior: smooth; /*Colocar a rolagem da scroll suavemente*/
 }
 
-body{
-    background-color: var(--brand-green-light);
-    font-size: 1.6rem;
-    text-align: center;
-    font-family: "DM Sans";
-
-    overflow: overlay; /*Dizer para a scroll fazer um sobreposição para corrigir o espaçamento da logo na hora de entrar no menu verde*/
+html,
+body {
+  width: 100%;
+  height: 100%;
 }
 
-.wrapper{
-    width: 37.5rem;
-    margin-inline: auto;
-    padding-inline: 2.4rem;
+body {
+  background-color: var(--brand-green-light);
+  font-size: 1.6rem;
+  text-align: center;
+  font-family: "DM Sans";
+
+  overflow: overlay; /*Dizer para a scroll fazer um sobreposição para corrigir o espaçamento da logo na hora de entrar no menu verde*/
 }
 
-ul{
-   list-style: none; 
+.wrapper {
+  width: 37.5rem;
+  margin-inline: auto;
+  padding-inline: 2.4rem;
 }
 
-section{
-    padding-block: 10rem;
+ul {
+  list-style: none;
 }
 
-/*<------------------------------->HEADER<------------------------------->*/
-
-header{
-    margin-top: calc(4.1rem + var(--nav-height)); /*Queremos que o margin-top some com o height do elemento nav para que ocorra uma harmonização de posições devido ao position fixed atráves do calc(),no qual fará sozinho os respectivos cálculos para que isso ocorra.*/
+section {
+  padding-block: 10rem;
 }
 
-header::before{
-    background-color: var(--brand-green);
-
-    content: '';
-    width: 100%; /*se você usar vw e colocar 100, ele vai sobra para o lado e criar uma scroll e para resolver isso, você usar porcentagem*/
-    height: calc(108rem + var(--nav-height)); /*Precisamos fazer um cálculo da altura novamente devido alterarmos as dimensões do nav position fixed em relação ao margin-top, o conteúdo foi empurrado para baixo alterando a posição do 108rem - ela vai voltar a ficar no meio da div */
-
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
+/*<------------------------------->Home<------------------------------->*/
+#home {
+  padding-top: calc(
+    4.1rem + var(--nav-height)
+  ); /*Queremos que o margin-top some com o height do elemento nav para que ocorra uma harmonização de posições devido ao position fixed atráves do calc(),no qual fará sozinho os respectivos cálculos para que isso ocorra.*/
 }
 
-header h4{
-    color: var(--primary-color);
+#home::before {
+  background-color: var(--brand-green);
 
-    font-size: 1.4rem;
-    margin-bottom: 1.6rem;
+  content: "";
+  width: 100%; /*se você usar vw e colocar 100, ele vai sobra para o lado e criar uma scroll e para resolver isso, você usar porcentagem*/
+  height: calc(
+    108rem + var(--nav-height)
+  ); /*Precisamos fazer um cálculo da altura novamente devido alterarmos as dimensões do nav position fixed em relação ao margin-top, o conteúdo foi empurrado para baixo alterando a posição do 108rem - ela vai voltar a ficar no meio da div */
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
-header h1{
-    color: var(--secondary-color);
+#home h4 {
+  color: var(--primary-color);
 
-    margin-bottom: 2.4rem;
-    font-size: 3.4rem;
-    line-height: 130%;
+  font-size: 1.4rem;
+  margin-bottom: 1.6rem;
 }
 
-header p{
-    color: var(--paragraph);
+#home h1 {
+  color: var(--secondary-color);
 
-    margin-bottom: 3.2rem;
-    font-size: 1.8rem;
-    line-height: 150%;
-    font-weight: 400;
+  margin-bottom: 2.4rem;
+  font-size: 3.4rem;
+  line-height: 130%;
 }
 
-header button{
-    background-color: var(--primary-color);
+#home p {
+  color: var(--paragraph);
 
-    width: 26.3rem;
-    height: 5.2rem;
-    margin-bottom: 6rem;
-    border: none;
-    border-radius: 4rem;
-    
-    color: #ffff;
-    text-transform: uppercase;
-    font-size: 1.4rem;
-    font-weight: 700;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1.6rem;
-
-    margin-right: auto;
-    margin-left: auto;
+  margin-bottom: 3.2rem;
+  font-size: 1.8rem;
+  line-height: 150%;
+  font-weight: 400;
 }
 
-header img{
-    width: 26.4rem;
-    height: 34rem;
+#home button {
+  background-color: var(--primary-color);
 
-    display: block; /*A imagem da mulher a div estão coladas com isso*/
-    margin-inline: auto;
-    object-position: center;
+  width: 26.3rem;
+  height: 5.2rem;
+  margin-bottom: 6rem;
+  border: none;
+  border-radius: 4rem;
+
+  color: #ffff;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: 700;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.6rem;
+
+  margin-right: auto;
+  margin-left: auto;
 }
 
-div.stats{
-    background-color: var(--brand-beige);
-    
-    width: 32.7rem;
-    padding-block: 4rem;/*Vai alterar o primeiro elemento superior e o ultimo elemento inferior*/
-    margin-inline: auto;
-    
-    display: flex;
-    flex-direction: column; /*Orientar a centralização em forma de coluna*/
-    align-items: center;
-    justify-content: center;
-    gap: 6rem;
-    
-    border: 0.1rem solid rgb(250, 242, 242);
-    border-radius: 1.6rem;
-    
-    padding-top: 4rem;
+#home img {
+  width: 26.4rem;
+  height: 34rem;
+
+  display: block; /*A imagem da mulher a div estão coladas com isso*/
+  margin-inline: auto;
+  object-position: center;
 }
 
-div.stat h3{
-    color: var(--secondary-color);
-    
-    font-size: 4.8rem;
-    line-height: 130%;
-    margin-bottom: 0.4rem;
+#home div.stats {
+  background-color: var(--brand-beige);
+
+  width: 32.7rem;
+  padding-block: 4rem; /*Vai alterar o primeiro elemento superior e o ultimo elemento inferior*/
+  margin-inline: auto;
+
+  display: flex;
+  flex-direction: column; /*Orientar a centralização em forma de coluna*/
+  align-items: center;
+  justify-content: center;
+  gap: 6rem;
+
+  border: 0.1rem solid rgb(250, 242, 242);
+  border-radius: 1.6rem;
+
+  padding-top: 4rem;
 }
 
-div.stat p{
-    color: var(--primary-color);
-    
-    margin: 0;
-    
-    line-height: 150%;
+#home div.stat h3 {
+  color: var(--secondary-color);
+
+  font-size: 4.8rem;
+  line-height: 130%;
+  margin-bottom: 0.4rem;
+}
+
+#home div.stat p {
+  color: var(--primary-color);
+
+  margin: 0;
+
+  line-height: 150%;
 }
 
 /*<------------------------------->FIM HEADER<------------------------------->*/
 
 /*<------------------------------->Ínicio Nav<------------------------------->*/
 
-nav{
-    height: var(--nav-height);/*Vamos transformar isso(height: 7.2rem) em uma variável*/
+nav {
+  height: var(
+    --nav-height
+  ); /*Vamos transformar isso(height: 7.2rem) em uma variável*/
 
-    display: flex;
+  display: flex;
 
-    position: fixed;
-    top: 0;
-    /*Podemos centralizar um elemento da seguinte forma no caso do position fixed*/
-    left: 50%;
-    transform: translateX(-50%);
-    /*Fim */
+  position: fixed;
+  top: 0;
+  /*Podemos centralizar um elemento da seguinte forma no caso do position fixed*/
+  left: 50%;
+  transform: translateX(-50%);
+  /*Fim */
 }
 
-nav .wrapper{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+nav .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-nav.scroll{
-    background-color: var(--primary-color);
+nav.scroll {
+  background-color: var(--primary-color);
 
-    width: 100vw;
+  width: 100vw;
 }
 
-nav.scroll svg:nth-child(1) path{
-    fill: var(--color-white);
+nav.scroll svg:nth-child(1) path {
+  fill: var(--color-white);
 }
 
 /*Cor branca do menu e seus derivados relacioandos a icones e texto*/
-nav.scroll i{
-    color: var(--color-white);
+nav.scroll i {
+  color: var(--color-white);
 }
 
-.close-icon{
-    font-size: 2.5rem;
+.close-icon {
+  font-size: 2.5rem;
 }
 
-nav button{
-    background: none;
-    border: none;
+nav button {
+  background: none;
+  border: none;
 
-    cursor: pointer;
+  cursor: pointer;
 }
 
 /*<------------------------------->Nav Vertical<------------------------------->*/
 
-body.menu-expanded{
-    overflow: hidden; /*Tirando a scroll no menu expandido*/
+body.menu-expanded {
+  overflow: hidden; /*Tirando a scroll no menu expandido*/
 }
 
-body.menu-expanded > :not(nav){ /*Vamos pegar todos os filhos do primeiro nível exceto a tag nav e vamos aplicar o display none para sumir tudo*/
-    display: none;
+body.menu-expanded > :not(nav) {
+  /*Vamos pegar todos os filhos do primeiro nível exceto a tag nav e vamos aplicar o display none para sumir tudo*/
+  display: none;
 }
 
-.menu, .menu-close, body.menu-expanded .menu-open {
-    opacity: 0;/*Vai deixar o menu sem visibilidade,mas os elementos permance clicavel */
-    visibility: hidden;/*Vai esconder por completo até mesmo as interações de clik*/
+.menu,
+.menu-close,
+body.menu-expanded .menu-open {
+  opacity: 0; /*Vai deixar o menu sem visibilidade,mas os elementos permance clicavel */
+  visibility: hidden; /*Vai esconder por completo até mesmo as interações de clik*/
 }
 
 /*Quanado o body tive o '.menu-expanded' vamos aplicar as seguintes propriedade para mostrar o conteúdo*/
-body.menu-expanded .menu, body.menu-expanded .menu-close{
-    opacity: 1;
-    visibility: visible;
+body.menu-expanded .menu,
+body.menu-expanded .menu-close {
+  opacity: 1;
+  visibility: visible;
 }
 
-body.menu-expanded .menu{
-    background-color: var(--primary-color);
-
-    width: 100vw;
-    height: 100vw;
-
-    padding-top: var(--nav-height);
-
-    position: fixed;
-    top: 0;
-    left: 0;
+.menu{
+    transform: translateY(100%); /*Vamos jogar o menu primeiramente no eixo y para fora da tela e depois vamos chamar ele para seu estado original*/
 }
 
-body.menu-expanded nav{
-    position: relative;
+body.menu-expanded .menu {
+  background-color: var(--primary-color);
+
+  width: 100vw;
+  height: 100vh;
+
+  padding-top: var(--nav-height);
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  transition: transform 350ms; /*fazer a aparição do menu de forma suave e com um tempo*/
+  transform: translateY(0%);  /*Chamando o menu para seu estado original */
 }
 
-.menu ul:nth-child(1){
-    margin-top: 6rem;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 4.8rem;
-
-    font-weight: 700;
-    font-size: 2.4rem;
-    line-height: 3.1rem;
-
+body.menu-expanded nav {
+  position: relative;
 }
 
-.menu ul li a{
-    color: var(--color-white);
+.menu ul:nth-child(1) {
+  margin-top: 6rem;
 
-    text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4.8rem;
+
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 3.1rem;
 }
 
-.menu-button-whatsapp{
-    background-color: var(--color-white);
-    color: var(--primary-color);
+.menu ul li a {
+  color: var(--color-white);
 
-    margin-top: 4.8rem;
-    margin-bottom: 8rem;
-    padding: 1.6rem 3.2rem;
-
-    display: inline-block;
-
-
-    font-weight: 700;
-    font-size: 1.8rem;
-    line-height: 2.3rem;
-    text-decoration: none;
-    text-transform: uppercase;
-
-    border-radius: 4rem;
-
+  text-decoration: none;
 }
 
+.menu-button-whatsapp {
+  background-color: var(--color-white);
+  color: var(--primary-color);
 
-.menu-social-links{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 3.2rem;
+  margin-top: 4.8rem;
+  margin-bottom: 8rem;
+  padding: 1.6rem 3.2rem;
+
+  display: inline-block;
+
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 2.3rem;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  border-radius: 4rem;
+}
+
+.menu-social-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3.2rem;
 }
 
 body.menu-expanded .logo,
-body.menu-expanded  button {
-    position: relative;
-    z-index: 100;
+body.menu-expanded button {
+  position: relative;
+  z-index: 100;
 }
 
-
-body.menu-expanded .logo path{
-    fill: var(--color-white);
+body.menu-expanded .logo path {
+  fill: var(--color-white);
 }
 
-body.menu-expanded button{
-    color: var(--color-white);
+body.menu-expanded button {
+  color: var(--color-white);
 }
-
 
 /*<------------------------------->Fim Nav Vertical<------------------------------->*/
 
-
 /*<------------------------------->Section - Services <------------------------------->*/
-#services header h4{
-    margin-bottom: 1.6rem;
+#services header h4 {
+  margin-bottom: 1.6rem;
 
-    font-size: 1.4rem;
-    line-height: 150%;
-    letter-spacing: 0.08rem; /*Espaçamento entre as letras*/
-    text-transform: uppercase;
+  font-size: 1.4rem;
+  line-height: 150%;
+  letter-spacing: 0.08rem; /*Espaçamento entre as letras*/
+  text-transform: uppercase;
 }
 
-#services header h2{
-    color: var(--secondary-color);
+#services header h2 {
+  color: var(--secondary-color);
 
-    margin-bottom: 6rem;
-    
-    font-size: 3rem;
-    line-height: 3.9rem;
+  margin-bottom: 6rem;
+
+  font-size: 3rem;
+  line-height: 3.9rem;
 }
 
-#services .cards{
-    display: flex;
-    flex-direction: column;
-    gap: 3.2rem;
+#services .cards {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
 }
 
-#services .card{
-    background: var(--color-white);
+#services .card {
+  background: var(--color-white);
 
-    padding: 2.4rem;
+  padding: 2.4rem;
 
-    border: 2px solid var(--brand-green);
-    border-radius: 1.5rem;
+  border: 2px solid var(--brand-green);
+  border-radius: 1.5rem;
 
-    text-align: left;
-
+  text-align: left;
 }
 
-#services .card h3{
-    margin-block: 1.6rem; /*Vai pegar em cima e embaixo*/
+#services .card h3 {
+  margin-block: 1.6rem; /*Vai pegar em cima e embaixo*/
 }
 
 /*<------------------------------->Section - Services <------------------------------->*/
