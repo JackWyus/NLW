@@ -48,6 +48,10 @@ ul {
   list-style: none;
 }
 
+img{
+  max-width: 100%;
+}
+
 section {
   padding-block: 10rem;
 }
@@ -245,7 +249,7 @@ body.menu-expanded button {
   color: var(--color-white);
 }
 
-/*<------------------------------->Fim Nav Vertical<------------------------------->*/
+    /*<------------------------------->Fim Nav Vertical<------------------------------->*/
 /*<----------------------------------->Fim Nav<---------------------------------->*/
 
 
@@ -407,4 +411,14 @@ body.menu-expanded button {
 }
 #about header h2{
   margin-bottom: 2.4rem;
+}
+
+#about .content p{
+  margin-top: 2.4rem;
+  margin-bottom: 6rem;
+}
+
+#about img{
+  width: 32.7rem;
+  height: 28.2rem;
 }
