@@ -172,14 +172,15 @@ section {
 
 nav {
   height: var(--nav-height); /*Vamos transformar isso(height: 7.2rem) em uma variável*/
+  width: 100vw;
 
   display: flex;
 
   position: fixed;
   top: 0;
-  /*Podemos centralizar um elemento da seguinte forma no caso do position fixed*/
+  /*Podemos centralizar um elemento da seguinte forma no caso do position fixed
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%);*/
   z-index: 100; 
 }
 
@@ -191,8 +192,8 @@ nav .wrapper {
 
 nav.scroll {
   background-color: var(--primary-color);
-
-  width: 100vw;
+  
+  
 }
 
 nav.scroll svg:nth-child(1) path {
@@ -204,8 +205,13 @@ nav.scroll i {
   color: var(--color-white);
 }
 
+#bars-icon{
+  font-size: 1.6rem;
+  text-align: right;
+}
+
 .close-icon {
-  font-size: 2.5rem;
+  font-size: 1.6rem;
 }
 
 nav button {

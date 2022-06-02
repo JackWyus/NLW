@@ -25,7 +25,7 @@ function closeMenu(){
 /* ScrollReveal lib*/
 
 ScrollReveal({
-    origin: 'top',//Ele vai começar a agir com a biblioteca no top - de cima para baixo
+    origin: 'top',  //Ele vai começar a agir com a biblioteca no top - de cima para baixo
     distance: '30px',
     duration: 700,
 }).reveal("#home, #home img, #home .stats, #services, #services header, #services .card");
