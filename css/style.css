@@ -53,6 +53,166 @@ section {
   padding-block: 10rem;
 }
 
+/*<------------------------------->Ínicio Nav<------------------------------->*/
+
+nav {
+  height: var(--nav-height); /*Vamos transformar isso(height: 7.2rem) em uma variável*/
+  width: 100vw;
+
+  display: flex;
+
+  position: fixed;
+  top: 0;
+  /*Podemos centralizar um elemento da seguinte forma no caso do position fixed
+  left: 50%;
+  transform: translateX(-50%);*/
+  z-index: 100; 
+}
+
+nav .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav.scroll {
+  background-color: var(--primary-color);
+}
+
+nav.scroll .logo path {
+  fill: var(--color-white);
+}
+
+/*Cor branca do menu e seus derivados relacioandos a icones e texto*/
+nav.scroll i {
+  color: var(--color-white);
+}
+
+#bars-icon{
+  font-size: 1.6rem;
+  text-align: right;
+}
+
+.close-icon {
+  font-size: 1.6rem;
+}
+
+nav button {
+  background: none;
+  border: none;
+
+  cursor: pointer;
+}
+
+
+/*<------------------------------->Nav Vertical<------------------------------->*/
+
+body.menu-expanded {
+  overflow: hidden; /*Tirando a scroll no menu expandido*/
+}
+
+body.menu-expanded > :not(nav) {
+  /*Vamos pegar todos os filhos do primeiro nível exceto a tag nav e vamos aplicar o display none para sumir tudo*/
+  /* display: none; */
+}
+
+.menu,
+.menu-close,
+body.menu-expanded .menu-open {
+  opacity: 0; /*Vai deixar o menu sem visibilidade,mas os elementos permance clicavel */
+  visibility: hidden; /*Vai esconder por completo até mesmo as interações de clik*/
+}
+
+/*Quanado o body tive o '.menu-expanded' vamos aplicar as seguintes propriedade para mostrar o conteúdo*/
+body.menu-expanded .menu,
+body.menu-expanded .menu-close {
+  opacity: 1;
+  visibility: visible;
+}
+
+.menu{
+    transform: translateY(100%); /*Vamos jogar o menu primeiramente no eixo y para fora da tela e depois vamos chamar ele para seu estado original*/
+}
+
+
+body.menu-expanded .menu {
+  background-color: var(--primary-color);
+
+  width: 100vw;
+  height: 100vh;
+
+  padding-top: var(--nav-height);
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  transition: transform 350ms; /*fazer a aparição do menu de forma suave e com um tempo*/
+  transform: translateY(0%);  /*Chamando o menu para seu estado original */
+}
+
+.menu ul:nth-child(1) {
+  margin-top: 6rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4.8rem;
+
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 3.1rem;
+}
+
+.menu ul li a {
+  color: var(--color-white);
+
+  text-decoration: none;
+}
+
+.menu-button-whatsapp {
+  background-color: var(--color-white);
+  color: var(--primary-color);
+
+  margin-top: 4.8rem;
+  margin-bottom: 8rem;
+  padding: 1.6rem 3.2rem;
+
+  display: inline-block;
+
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 2.3rem;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  border-radius: 4rem;
+}
+
+.menu-social-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3.2rem;
+}
+
+body.menu-expanded .logo,
+body.menu-expanded button {
+  position: relative;
+  z-index: 100;
+}
+
+body.menu-expanded .logo path {
+  fill: var(--color-white);
+}
+
+body.menu-expanded button {
+  color: var(--color-white);
+}
+
+/*<------------------------------->Fim Nav Vertical<------------------------------->*/
+
 /*<------------------------------->Home<------------------------------->*/
 #home {
   padding-top: calc(
@@ -167,172 +327,6 @@ section {
 }
 
 /*<------------------------------->FIM HEADER<------------------------------->*/
-
-/*<------------------------------->Ínicio Nav<------------------------------->*/
-
-nav {
-  height: var(--nav-height); /*Vamos transformar isso(height: 7.2rem) em uma variável*/
-  width: 100vw;
-
-  display: flex;
-
-  position: fixed;
-  top: 0;
-  /*Podemos centralizar um elemento da seguinte forma no caso do position fixed
-  left: 50%;
-  transform: translateX(-50%);*/
-  z-index: 100; 
-}
-
-nav .wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-nav.scroll {
-  background-color: var(--primary-color);
-  
-  
-}
-
-nav.scroll svg:nth-child(1) path {
-  fill: var(--color-white);
-}
-
-/*Cor branca do menu e seus derivados relacioandos a icones e texto*/
-nav.scroll i {
-  color: var(--color-white);
-}
-
-#bars-icon{
-  font-size: 1.6rem;
-  text-align: right;
-}
-
-.close-icon {
-  font-size: 1.6rem;
-}
-
-nav button {
-  background: none;
-  border: none;
-
-  cursor: pointer;
-}
-
-/*<------------------------------->Nav Vertical<------------------------------->*/
-
-body.menu-expanded {
-  overflow: hidden; /*Tirando a scroll no menu expandido*/
-}
-
-body.menu-expanded > :not(nav) {
-  /*Vamos pegar todos os filhos do primeiro nível exceto a tag nav e vamos aplicar o display none para sumir tudo*/
-  /* display: none; */
-}
-
-.menu,
-.menu-close,
-body.menu-expanded .menu-open {
-  opacity: 0; /*Vai deixar o menu sem visibilidade,mas os elementos permance clicavel */
-  visibility: hidden; /*Vai esconder por completo até mesmo as interações de clik*/
-}
-
-/*Quanado o body tive o '.menu-expanded' vamos aplicar as seguintes propriedade para mostrar o conteúdo*/
-body.menu-expanded .menu,
-body.menu-expanded .menu-close {
-  opacity: 1;
-  visibility: visible;
-}
-
-.menu{
-    transform: translateY(100%); /*Vamos jogar o menu primeiramente no eixo y para fora da tela e depois vamos chamar ele para seu estado original*/
-}
-
-
-body.menu-expanded .menu {
-  background-color: var(--primary-color);
-
-  width: 100vw;
-  height: 100vh;
-
-  padding-top: var(--nav-height);
-
-  position: fixed;
-  top: 0;
-  left: 0;
-
-  transition: transform 350ms; /*fazer a aparição do menu de forma suave e com um tempo*/
-  transform: translateY(0%);  /*Chamando o menu para seu estado original */
-}
-
-
-body.menu-expanded nav {
-  position: relative;
-}
-
-.menu ul:nth-child(1) {
-  margin-top: 6rem;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 4.8rem;
-
-  font-weight: 700;
-  font-size: 2.4rem;
-  line-height: 3.1rem;
-}
-
-.menu ul li a {
-  color: var(--color-white);
-
-  text-decoration: none;
-}
-
-.menu-button-whatsapp {
-  background-color: var(--color-white);
-  color: var(--primary-color);
-
-  margin-top: 4.8rem;
-  margin-bottom: 8rem;
-  padding: 1.6rem 3.2rem;
-
-  display: inline-block;
-
-  font-weight: 700;
-  font-size: 1.8rem;
-  line-height: 2.3rem;
-  text-decoration: none;
-  text-transform: uppercase;
-
-  border-radius: 4rem;
-}
-
-.menu-social-links {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 3.2rem;
-}
-
-body.menu-expanded .logo,
-body.menu-expanded button {
-  position: relative;
-  z-index: 100;
-}
-
-body.menu-expanded .logo path {
-  fill: var(--color-white);
-}
-
-body.menu-expanded button {
-  color: var(--color-white);
-}
-
-/*<------------------------------->Fim Nav Vertical<------------------------------->*/
 
 /*<------------------------------->Section - Services <------------------------------->*/
 #services header h4 {
