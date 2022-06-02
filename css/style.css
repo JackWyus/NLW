@@ -1,5 +1,4 @@
 /*Geral*/
-
 * {
   margin: 0;
   padding: 0;
@@ -53,8 +52,43 @@ section {
   padding-block: 10rem;
 }
 
-/*<------------------------------->Ínicio Nav<------------------------------->*/
+section header h1{
+  color: var(--secondary-color);
 
+  margin-bottom: 2.4rem;
+  font-size: 3.4rem;
+  line-height: 130%;
+}
+
+section header h2{
+  color: var(--secondary-color);
+
+  font-size: 3rem;
+  line-height: 3.9rem;
+}
+
+section header h4{
+  color: var(--primary-color);
+
+  margin-bottom: 1.6rem;
+
+  font-size: 1.4rem;
+  line-height: 150%;
+  font-weight: 700;
+  letter-spacing: 0.08rem; /*Espaçamento entre as letras*/
+  text-transform: uppercase;
+}
+
+section .content p{
+  color: var(--paragraph);
+  
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 150%;
+}
+
+
+/*<------------------------------->Ínicio Nav<------------------------------->*/
 nav {
   height: var(--nav-height); /*Vamos transformar isso(height: 7.2rem) em uma variável*/
   width: 100vw;
@@ -105,8 +139,8 @@ nav button {
 }
 
 
-/*<------------------------------->Nav Vertical<------------------------------->*/
 
+/*<------------------------------->Nav Vertical<------------------------------->*/
 body.menu-expanded {
   overflow: hidden; /*Tirando a scroll no menu expandido*/
 }
@@ -212,8 +246,10 @@ body.menu-expanded button {
 }
 
 /*<------------------------------->Fim Nav Vertical<------------------------------->*/
+/*<----------------------------------->Fim Nav<---------------------------------->*/
 
-/*<------------------------------->Home<------------------------------->*/
+
+/*<------------------------------->Ínicio -Header - Home<------------------------------->*/
 #home {
   padding-top: calc(
     4.1rem + var(--nav-height)
@@ -233,21 +269,6 @@ body.menu-expanded button {
   top: 0;
   left: 0;
   z-index: -1;
-}
-
-#home h4 {
-  color: var(--primary-color);
-
-  font-size: 1.4rem;
-  margin-bottom: 1.6rem;
-}
-
-#home h1 {
-  color: var(--secondary-color);
-
-  margin-bottom: 2.4rem;
-  font-size: 3.4rem;
-  line-height: 130%;
 }
 
 #home p {
@@ -326,27 +347,14 @@ body.menu-expanded button {
   line-height: 150%;
 }
 
-/*<------------------------------->FIM HEADER<------------------------------->*/
+/*<------------------------------->FIM HEADER - Home <------------------------------->*/
+
+
 
 /*<------------------------------->Section - Services <------------------------------->*/
-#services header h4 {
-    color: var(--primary-color);
 
-  margin-bottom: 1.6rem;
-
-  font-size: 1.4rem;
-  line-height: 150%;
-  letter-spacing: 0.08rem; /*Espaçamento entre as letras*/
-  text-transform: uppercase;
-}
-
-#services header h2 {
-  color: var(--secondary-color);
-
+#services header h2{
   margin-bottom: 6rem;
-
-  font-size: 3rem;
-  line-height: 3.9rem;
 }
 
 #services .cards {
@@ -366,8 +374,37 @@ body.menu-expanded button {
   text-align: left;
 }
 
+#services .circute-icon{
+  background-color: var(--brand-green);
+
+  width: 2.4rem;
+  height: 2.4rem;
+
+  text-align: center;
+
+  border-radius: 50%;
+} 
+
+#services .card i{
+  color: var(--primary-color);
+
+  font-size: 1.3rem;
+}
+
 #services .card h3 {
   margin-block: 1.6rem; /*Vai pegar em cima e embaixo*/
 }
 
+
 /*<------------------------------->Section - Services <------------------------------->*/
+
+
+/*<------------------------------->Section - About <------------------------------->*/
+#about {
+  background-color: var(--brand-beige);
+
+  text-align: left;
+}
+#about header h2{
+  margin-bottom: 2.4rem;
+}

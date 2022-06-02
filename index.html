@@ -12,10 +12,11 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Red+Hat+Mono:wght@300&display=swap" rel="stylesheet">
 
   </head>
+
   <body onscroll="onScroll()"> <!--onscroll é um evento que é ativado quando ocorre uma rolagem no navegador-->
 
-    <!--navigation-->
-    <nav id="navigation">
+    <!--navigation - menu -->
+      <nav id="navigation">
 
       <div class="wrapper">
 
@@ -40,7 +41,7 @@
           <ul>
             <li><a onclick="closeMenu()" href="#home">Inicio</a></li>
             <li><a onclick="closeMenu()" href="#services">Serviços</a></li>
-            <li><a onclick="closeMenu()" href="#">Sobre</a></li>
+            <li><a onclick="closeMenu()" href="#about">Sobre</a></li>
           </ul>
 
           <a class="menu-button-whatsapp" href="#">Agende sua Consulta</a>
@@ -63,30 +64,35 @@
   
       </div><!--wrapper-->
 
-    </nav>
-    <!--navigation-->
+      </nav>
+    <!--navigation - menu -->
 
-    <!-- Header - wrapper -->
-    <header id="home" >
+    <!-- section - home -->
+      <section id="home" >
 
       <div class="wrapper">
+        <header>
+          <h4>Boas-Vindas a DOCTORCARE</h4>
+          <h1>Assistência médica simplificada para todos</h1>
+        </header>
 
-        <h4>Boas-Vindas a DOCTORCARE</h4>
-        <h1>Assistência médica simplificada para todos</h1>
-        <p>
-         Os médicos da DoctorCare vão além dos sintomas para tratar a causa raiz
-         de sua doença e proporcionar uma cura a longo prazo
-       </p>
-       <button>
-          <i class="fa-brands fa-whatsapp"></i>
-          Agende sua Consulta
-       </button>
+        <!--content-->
+          <div class="content">
+            <p>
+            Os médicos da DoctorCare vão além dos sintomas para tratar a causa raiz
+            de sua doença e proporcionar uma cura a longo prazo
+            </p>
+           <button>
+              <i class="fa-brands fa-whatsapp"></i>
+              Agende sua Consulta
+           </button>
+           <img src="./assets/women.png" alt="Mulher negra vestindo moletom verde sorrindo"/>
 
-        <img
-         src="./assets/women.png"
-          alt="Mulher negra vestindo moletom verde sorrindo"
-       />
+          </div>
+        <!--content-->
 
+
+       <!--stats-->
         <div class="stats">
           <div class="stat">
             <h3>+3.500</h3>
@@ -106,67 +112,110 @@
         <!--stats-->
 
       </div>
-    </header>
-    <!-- Header - wrapper -->
+      </section>
+    <!-- section - home -->
     
 
     <!-- Section - services -->
-    <section id="services">
+      <section id="services">
 
-      <!--wrapper-->
-      <div class="wrapper">
+        <!--wrapper-->
+          <div class="wrapper">
         <header>
           <h4>Serviços</h4>
           <h2>Como podemos ajudá-lo a se sentir melhor?</h2>
         </header>
 
-        <!--cards-->
-        <div class="cards">
+        <div class="content">
 
-          <div class="card">
-            <i class="fa-solid fa-check"></i>
-            <h3>Problemas digestivos</h3>
-            <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim.</p>
-          </div>
+          <!--cards-->
+          <div class="cards">
 
-          <div class="card">
-            <i class="fa-solid fa-check"></i>
-            <h3>Saúde Hormonal</h3>
-            <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim.</p>
-          </div>
+            <div class="card">
+              <div class="circute-icon">
+                <i class="fa-solid fa-check"></i>
+              </div>
+              <h3>Problemas digestivos</h3>
+              <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim.</p>
+            </div>
 
-          <div class="card">
-            <i class="fa-solid fa-check"></i>
-            <h3>Bem-estar mental</h3>
-            <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim.</p>
-          </div>
+            <div class="card">
+              <div class="circute-icon">
+                <i class="fa-solid fa-check"></i>
+              </div>
+              <h3>Saúde Hormonal</h3>
+              <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim.</p>
+            </div>
 
-          <div class="card">
-            <i class="fa-solid fa-check"></i>
-            <h3>Cuidados Pediátricos</h3>
-            <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim.</p>
-          </div>
+            <div class="card">
+              <div class="circute-icon">
+                <i class="fa-solid fa-check"></i>
+              </div>
+              <h3>Bem-estar mental</h3>
+              <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim.</p>
+            </div>
 
-          <div class="card">
-            <i class="fa-solid fa-check"></i>
-            <h3>Autoimune e Inflamação</h3>
-            <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim.</p>
-          </div>
+            <div class="card">
+              <div class="circute-icon">
+                <i class="fa-solid fa-check"></i>
+              </div>
+              <h3>Cuidados Pediátricos</h3>
+              <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim.</p>
+            </div>
 
-          <div class="card">
-            <i class="fa-solid fa-check"></i>
-            <h3>Saúde do Coração</h3>
-            <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim.</p>
+            <div class="card">
+              <div class="circute-icon">
+                <i class="fa-solid fa-check"></i>
+              </div>
+              <h3>Autoimune e Inflamação</h3>
+              <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim.</p>
+            </div>
+
+            <div class="card">
+              <div class="circute-icon">
+                <i class="fa-solid fa-check"></i>
+              </div>
+              <h3>Saúde do Coração</h3>
+              <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim.</p>
+            </div>
+
           </div>
+          <!--cards-->
 
         </div>
-        <!--cards-->
+        <!--content-->
+
+          </div>
+        <!--wrapper-->
+
+      </section>
+    <!-- Section - services -->
+
+
+    <!--section - about-->
+      <section id="about">
+
+      <div class="wrapper">
+
+        <header>
+          <h4>Sobre Nós</h4>
+          <h2>Entenda quem somos e por que existimos</h2>
+        </header>
+
+        <div class="content">
+          <p>
+            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+          </p>
+
+         <img src="./assets/happy-doctor-holding-a-clipboard-with-patients.png" alt="Pacientes e Doutor Sorrindo">
+        </div>
 
       </div>
       <!--wrapper-->
 
-    </section>
-    <!-- Section - services -->
+      </section>
+    <!--section - about-->
+
 
     <!--ScrollReveal Lib-->
     <script src="https://unpkg.com/scrollreveal"></script>
