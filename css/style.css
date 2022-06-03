@@ -15,6 +15,7 @@
   --brand-green-light: #f7f9f9;
   --brand-green: #dce9e2;
   --color-white: #ffff;
+  --brand-gree-hover: #00450A;
 
   --nav-height: 7.2rem; /*Queremos que o margin-top some com o height do elemento nav para que ocorra uma harmonização de posições devido ao position fixed atráves do calc(),no qual fará sozinho os respectivos cálculos para que isso ocorra.*/
 }
@@ -43,7 +44,7 @@ body {
   margin-inline: auto;
   padding-inline: 2.4rem;
 }
-
+/*Genericos*/
 ul {
   list-style: none;
 }
@@ -91,6 +92,35 @@ section .content p{
   line-height: 150%;
 }
 
+.button {
+  background-color: var(--primary-color);
+
+  width: 26.3rem;
+  height: 5.2rem;
+  margin-bottom: 6rem;
+  border: none;
+  border-radius: 4rem;
+
+  color: #ffff;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-decoration: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.6rem;
+
+  margin-right: auto;
+  margin-left: auto;
+
+  transition: background 0.2s;
+}
+
+.button:hover{
+  background-color: var(--brand-gree-hover);
+}
 
 /*<------------------------------->Ínicio Nav<------------------------------->*/
 nav {
@@ -228,7 +258,9 @@ body.menu-expanded .menu {
   border-radius: 4rem;
 }
 
-.menu-social-links {
+.menu-social-links,footer i{
+  color: var(--color-white);
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -287,29 +319,6 @@ body.menu-expanded button {
   font-size: 1.8rem;
   line-height: 150%;
   font-weight: 400;
-}
-
-#home button {
-  background-color: var(--primary-color);
-
-  width: 26.3rem;
-  height: 5.2rem;
-  margin-bottom: 6rem;
-  border: none;
-  border-radius: 4rem;
-
-  color: #ffff;
-  text-transform: uppercase;
-  font-size: 1.4rem;
-  font-weight: 700;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1.6rem;
-
-  margin-right: auto;
-  margin-left: auto;
 }
 
 #home img {
@@ -428,6 +437,8 @@ body.menu-expanded button {
   width: 32.7rem;
   height: 28.2rem;
 }
+
+
 /*<------------------------------->FIM - Section - About <------------------------------->*/
 
 /*<------------------------------->Section - Contact <------------------------------->*/
@@ -435,6 +446,7 @@ body.menu-expanded button {
 #contact{
   text-align: left;
 }
+
 #contact header{
   margin-bottom: 3.2rem;
 }
@@ -443,6 +455,8 @@ body.menu-expanded button {
   display: flex;
   flex-direction: column;
   gap: 1.6rem;
+
+  margin-bottom: 3.2rem;
 }
 
 #contact ul li{
@@ -457,7 +471,57 @@ body.menu-expanded button {
   gap: 1.1rem;
 }
 
-
-
+#contact ul i{
+  color: var(--primary-color);
+}
 
 /*<------------------------------->Section - Contact <------------------------------->*/
+
+/*<------------------------------->Footer<------------------------------->*/
+
+footer{
+  background-color: var(--primary-color);
+  color: var(--color-white);
+ 
+  text-align: center;
+  padding-block: 6rem;
+}
+
+footer .logo{
+  display: inline-block;
+  margin-bottom: 2.4rem;
+}
+
+footer .logo svg{
+  width: 23.6rem;
+  height: 3.1rem;
+}
+
+footer .logo path{
+  fill:  var(--color-white);
+}
+
+footer p{
+  color: var(--brand-beige);
+  line-height: 0.5;
+
+  margin-bottom: 3.2rem;
+}
+
+/*<------------------------------->Footer<------------------------------->*/
+
+/*<------------------------------->Back to top<------------------------------->*/
+
+#backtotopButton{
+  position: fixed;
+  bottom: 1rem;
+  right: 3rem;
+}
+
+#backtotopButton i{
+  color: var(--primary-color);
+
+  font-size: 4rem;
+}
+
+/*<------------------------------->Back to top<------------------------------->*/
