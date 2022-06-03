@@ -58,7 +58,7 @@
           <i id="bars-icon" class="fa-solid fa-bars"></i>
         </button><!--menu-open-->
 
-        <button onclick="closeMenu()" class="menu-close" aria-label="Fechar menu">
+        <button id="closebutton" onclick="closeMenu()" class="menu-close" aria-label="Fechar menu">
           <i class="fa-solid fa-xmark close-icon"></i>
         </button><!--menu-close-->
   
@@ -82,10 +82,10 @@
             Os médicos da DoctorCare vão além dos sintomas para tratar a causa raiz
             de sua doença e proporcionar uma cura a longo prazo
             </p>
-           <button>
+           <a class="button" href="https://wa.me/5562985890506" target="_blank">
               <i class="fa-brands fa-whatsapp"></i>
               Agende sua Consulta
-           </button>
+           </a>
            <img src="./assets/women.png" alt="Mulher negra vestindo moletom verde sorrindo"/>
 
           </div>
@@ -216,6 +216,34 @@
       </section>
     <!--section - about-->
 
+    <!--section - contact-->
+      <section id="contact">
+        <div class="wrapper">
+          <header>
+            <h2>Entre em contato com a gente!</h2>
+          </header>
+
+          <div>
+            <ul>           
+              <li> <i class="fa-solid fa-location-dot"></i>R. Amauri Souza, 346</li>
+              <li> <i class="fa-solid fa-envelope"></i>Contato@doctorcare.com</li>
+            </ul>
+
+              <!--Vamos usar um link de uma API do whatsapp direcionando para o contato da pessoa correta,usando primeiro o id do brasil, logo em seguida o id do estado seguido do número da pessoa responsáve-->
+              <a  class="button" href="https://wa.me/5562985890506" target="_blank"> 
+                <i class="fa-brands fa-whatsapp"></i>
+                Agende sua Consulta 
+              </a>
+
+            <img src="./assets/pic.png" alt="Homem negro sorrindo olhando para o celular">
+
+          </div>
+        </div>
+        <!--wrapper-->
+
+      </section>
+    <!--section - contact-->
+    
 
     <!--ScrollReveal Lib-->
     <script src="https://unpkg.com/scrollreveal"></script>

@@ -249,6 +249,11 @@ body.menu-expanded button {
   color: var(--color-white);
 }
 
+#closebutton{
+  margin-right: 2.5rem;
+  font-size: 1.6rem;
+}
+
     /*<------------------------------->Fim Nav Vertical<------------------------------->*/
 /*<----------------------------------->Fim Nav<---------------------------------->*/
 
@@ -404,6 +409,7 @@ body.menu-expanded button {
 
 
 /*<------------------------------->Section - About <------------------------------->*/
+
 #about {
   background-color: var(--brand-beige);
 
@@ -422,3 +428,36 @@ body.menu-expanded button {
   width: 32.7rem;
   height: 28.2rem;
 }
+/*<------------------------------->FIM - Section - About <------------------------------->*/
+
+/*<------------------------------->Section - Contact <------------------------------->*/
+
+#contact{
+  text-align: left;
+}
+#contact header{
+  margin-bottom: 3.2rem;
+}
+
+#contact ul{
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+#contact ul li{
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+#contact ul li:nth-of-type(1){
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+}
+
+
+
+
+/*<------------------------------->Section - Contact <------------------------------->*/
