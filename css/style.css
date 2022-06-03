@@ -512,13 +512,21 @@ footer p{
 
 /*<------------------------------->Back to top<------------------------------->*/
 
-#backtotopButton{
+#backToTopButton{
   position: fixed;
   bottom: 1rem;
   right: 3rem;
+
+  opacity: 0; /*O botão vai iníciar escondido*/
+  visibility: hidden;
 }
 
-#backtotopButton i{
+#backToTopButton.show{
+  opacity: 1;
+  visibility: visible;
+}
+
+#backToTopButton i{
   color: var(--primary-color);
 
   font-size: 4rem;
