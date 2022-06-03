@@ -15,7 +15,7 @@
   --brand-green-light: #f7f9f9;
   --brand-green: #dce9e2;
   --color-white: #ffff;
-  --brand-gree-hover: #00450A;
+  --brand-gree-hover: #00453A;
 
   --nav-height: 7.2rem; /*Queremos que o margin-top some com o height do elemento nav para que ocorra uma harmonização de posições devido ao position fixed atráves do calc(),no qual fará sozinho os respectivos cálculos para que isso ocorra.*/
 }
@@ -202,7 +202,6 @@ body.menu-expanded .menu-close {
     transform: translateY(100%); /*Vamos jogar o menu primeiramente no eixo y para fora da tela e depois vamos chamar ele para seu estado original*/
 }
 
-
 body.menu-expanded .menu {
   background-color: var(--primary-color);
 
@@ -239,7 +238,7 @@ body.menu-expanded .menu {
   text-decoration: none;
 }
 
-.menu-button-whatsapp {
+.menu-button-whatsapp{
   background-color: var(--color-white);
   color: var(--primary-color);
 
@@ -256,6 +255,13 @@ body.menu-expanded .menu {
   text-transform: uppercase;
 
   border-radius: 4rem;
+}
+
+.menu-button-whatsapp:hover{
+  background-color: var(--primary-color);
+  color: var(--color-white);
+
+  filter: brightness(1.2); /*Aumenta o brilho do elemento*/
 }
 
 .menu-social-links,footer i{
@@ -519,11 +525,16 @@ footer p{
 
   opacity: 0; /*O botão vai iníciar escondido*/
   visibility: hidden;
+
+  transform: translateY(100%);
+  transition: 200ms;
 }
 
 #backToTopButton.show{
   opacity: 1;
   visibility: visible;
+
+  transform: translateY(0%);
 }
 
 #backToTopButton i{

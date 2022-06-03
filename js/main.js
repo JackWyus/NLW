@@ -1,5 +1,5 @@
 
-window.addEventListener('scroll',onScroll)
+window.addEventListener('scroll', onScroll)
 onScroll()
 
 
@@ -31,7 +31,7 @@ onScroll()
             document.querySelector('#backToTopButton').classList.add('show')  
         }
         else{
-            document.querySelector('#backToTopButton').classList.remove('scroll')  
+            document.querySelector('#backToTopButton').classList.remove('show')  
         }
     
     }
