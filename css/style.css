@@ -8,7 +8,7 @@
 :root {
   font-size: 62.5%; /*1rem = 10px - dessa forma, não existe uma grande necessidade de fazer calculos de conversão*/
 
-  --hue: 1;
+  --hue: 380;
 
   --primary-color: hsl(var(--hue), 100%, 26%);
   --secondary-color: hsl(210, 11%, 15%);
@@ -295,17 +295,10 @@ body.menu-expanded .logo path {
   fill: var(--color-white);
 }
 
-/*-------------------------------------*/
-body.menu-expanded button path {
-  stroke: var(--color-white);
-}
+
 
     /*<------------------------------->Fim Nav Vertical<------------------------------->*/
 /*<----------------------------------->Fim Nav<---------------------------------->*/
-
-
-
-
 
 
 /*<------------------------------->Ínicio -Header - Home<------------------------------->*/
@@ -385,18 +378,6 @@ body.menu-expanded button path {
 
 /*<------------------------------->FIM HEADER - Home <------------------------------->*/
 
-
-
-
-
-
-
-
-
-
-
-
-
 /*<------------------------------->Section - Services <------------------------------->*/
 
 #services header h2{
@@ -424,32 +405,16 @@ body.menu-expanded button path {
   margin-block: 1.6rem; /*Vai pegar em cima e embaixo*/
 }
 
-/*
-#services .card circle{
-  fill: ;
+#services .card path{
+  stroke: var(--primary-color);
 }
-*/
+
+#services .card circle{
+  fill: var(--brand-green);
+}
+
 
 /*<------------------------------->Section - Services <------------------------------->*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*<------------------------------->Section - About <------------------------------->*/
 
@@ -473,10 +438,7 @@ body.menu-expanded button path {
   height: 28.2rem;
 }
 
-
 /*<------------------------------->FIM - Section - About <------------------------------->*/
-
-
 
 /*<------------------------------->Section - Contact <------------------------------->*/
 
@@ -513,9 +475,6 @@ body.menu-expanded button path {
 }
 
 /*<------------------------------->Section - Contact <------------------------------->*/
-
-
-
 
 /*<------------------------------->Footer<------------------------------->*/
 
