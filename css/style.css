@@ -45,7 +45,9 @@ body {
 }
 
 .wrapper {
-  width: 37.5rem;
+  /*a propriedade min serve para você estabelecer uma largura minima entre dois valores,se a largura do celular
+  for menor que 50rem,use 100% da tela, se não, matenha o 50rem, ele vai selecionar o menor valor sempre */
+  width: min(50rem, 100%);
   margin-inline: auto;
   padding-inline: 2.4rem;
 }
@@ -177,8 +179,6 @@ nav.scroll i{
   color: var(--color-white);
 }
 
-
-
 .close-icon {
   font-size: 1.6rem;
 }
@@ -189,7 +189,6 @@ nav button {
 
   cursor: pointer;
 }
-
 
 
 /*<------------------------------->Nav Vertical<------------------------------->*/
@@ -354,10 +353,10 @@ body.menu-expanded button {
   object-position: center;
 }
 
-#home div.stats {
+#home div .stats {
   background-color: var(--brand-beige);
 
-  width: 32.7rem;
+  width: 100%;
   padding-block: 4rem; /*Vai alterar o primeiro elemento superior e o ultimo elemento inferior*/
   margin-inline: auto;
 
