@@ -8,7 +8,7 @@
 :root {
   font-size: 62.5%; /*1rem = 10px - dessa forma, não existe uma grande necessidade de fazer calculos de conversão*/
 
-  --hue: 380;
+  --hue: 170;
 
   --primary-color: hsl(var(--hue), 100%, 26%);
   --secondary-color: hsl(210, 11%, 15%);
@@ -421,22 +421,34 @@ body.menu-expanded .logo path {
 #about{
   background-color: var(--brand-beige);
 
+  text-align: center;
+}
+
+#about h4{
   text-align: left;
+
 }
 
 #about header h2{
   margin-bottom: 2.4rem;
+
+  text-align: left;
 }
 
 #about .content p{
   margin-top: 2.4rem;
   margin-bottom: 6rem;
+
+  text-align: left;
+
 }
+
 
 #about img{
   width: 32.7rem;
   height: 28.2rem;
 }
+
 
 /*<------------------------------->FIM - Section - About <------------------------------->*/
 
