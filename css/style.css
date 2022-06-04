@@ -51,7 +51,9 @@ body {
   margin-inline: auto;
   padding-inline: 2.4rem;
 }
+
 /*Genericos*/
+
 ul {
   list-style: none;
 }
@@ -131,8 +133,8 @@ section .content p{
 
 /*<------------------------------->Ínicio Nav<------------------------------->*/
 nav {
-  height: var(--nav-height); /*Vamos transformar isso(height: 7.2rem) em uma variável*/
   width: 100vw;
+  height: var(--nav-height); /*Vamos transformar isso(height: 7.2rem) em uma variável*/
 
   display: flex;
 
@@ -149,12 +151,17 @@ nav .wrapper {
   align-items: center;
   justify-content: space-between;
 }
+
 /*Na tag Nav com a class ".logo" que contém a tag path[Selecione apenas os elementos que possuem o fill="XX"] e altere sua propriedade*/
 nav .logo path[fill*="#00856F"]{
   fill: var(--primary-color);
 }
 
-nav.scroll {
+nav .open-menu path{
+  stroke: var(--primary-color);
+}
+
+nav.scroll{
   background-color: var(--primary-color);
 }
 
@@ -162,32 +169,20 @@ nav.scroll .logo path {
   fill: var(--color-white);
 }
 
-#bars-icon{
-  color: var(--primary-color);
-
-  font-size: 1.6rem;
-  text-align: right;
+nav.scroll .open-menu path{
+  stroke: var(--color-white);
 }
 
-/*Na Tag Nav quando exister a class ".scroll" no id #bars-icon, altere a cor do elemento, se não existir,mantenha a cor padrão*/
-nav.scroll #bars-icon{
-  color: var(--color-white);
-}
-
-/*Cor branca do menu e seus derivados relacioandos a icones e texto*/
-nav.scroll i{
-  color: var(--color-white);
-}
-
-.close-icon {
-  font-size: 1.6rem;
-}
-
-nav button {
+nav button{
   background: none;
-  border: none;
 
+  border: none;
   cursor: pointer;
+}
+
+nav .menu,
+nav .close-menu{
+  position: fixed;
 }
 
 
@@ -199,24 +194,25 @@ body.menu-expanded {
 body.menu-expanded > :not(nav) {
   /*Vamos pegar todos os filhos do primeiro nível exceto a tag nav e vamos aplicar o display none para sumir tudo*/
   /* display: none; */
+  visibility: hidden;
 }
 
 .menu,
-.menu-close,
-body.menu-expanded .menu-open {
+.close-menu,
+body.menu-expanded .open-menu {
   opacity: 0; /*Vai deixar o menu sem visibilidade,mas os elementos permance clicavel */
   visibility: hidden; /*Vai esconder por completo até mesmo as interações de clik*/
 }
 
 /*Quanado o body tive o '.menu-expanded' vamos aplicar as seguintes propriedade para mostrar o conteúdo*/
 body.menu-expanded .menu,
-body.menu-expanded .menu-close {
+body.menu-expanded .close-menu {
   opacity: 1;
   visibility: visible;
 }
 
 .menu{
-    transform: translateY(100%); /*Vamos jogar o menu primeiramente no eixo y para fora da tela e depois vamos chamar ele para seu estado original*/
+  transform: translateY(100%); /*Vamos jogar o menu primeiramente no eixo y para fora da tela e depois vamos chamar ele para seu estado original*/
 }
 
 body.menu-expanded .menu {
@@ -227,7 +223,6 @@ body.menu-expanded .menu {
 
   padding-top: var(--nav-height);
 
-  position: fixed;
   top: 0;
   left: 0;
 
@@ -300,17 +295,17 @@ body.menu-expanded .logo path {
   fill: var(--color-white);
 }
 
-body.menu-expanded button {
-  color: var(--color-white);
-}
-
-#closebutton{
-  margin-right: 2.5rem;
-  font-size: 1.6rem;
+/*-------------------------------------*/
+body.menu-expanded button path {
+  stroke: var(--color-white);
 }
 
     /*<------------------------------->Fim Nav Vertical<------------------------------->*/
 /*<----------------------------------->Fim Nav<---------------------------------->*/
+
+
+
+
 
 
 /*<------------------------------->Ínicio -Header - Home<------------------------------->*/
@@ -392,13 +387,23 @@ body.menu-expanded button {
 
 
 
+
+
+
+
+
+
+
+
+
+
 /*<------------------------------->Section - Services <------------------------------->*/
 
 #services header h2{
   margin-bottom: 6rem;
 }
 
-#services .cards {
+#services .cards{
   display: flex;
   flex-direction: column;
   gap: 3.2rem;
@@ -415,38 +420,45 @@ body.menu-expanded button {
   text-align: left;
 }
 
-#services .circute-icon{
-  background-color: var(--brand-green);
-
-  width: 2.4rem;
-  height: 2.4rem;
-
-  text-align: center;
-
-  border-radius: 50%;
-} 
-
-#services .card i{
-  color: var(--primary-color);
-
-  font-size: 1.3rem;
-}
-
 #services .card h3 {
   margin-block: 1.6rem; /*Vai pegar em cima e embaixo*/
 }
 
+/*
+#services .card circle{
+  fill: ;
+}
+*/
 
 /*<------------------------------->Section - Services <------------------------------->*/
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*<------------------------------->Section - About <------------------------------->*/
 
-#about {
+#about{
   background-color: var(--brand-beige);
 
   text-align: left;
 }
+
 #about header h2{
   margin-bottom: 2.4rem;
 }
@@ -463,6 +475,8 @@ body.menu-expanded button {
 
 
 /*<------------------------------->FIM - Section - About <------------------------------->*/
+
+
 
 /*<------------------------------->Section - Contact <------------------------------->*/
 
@@ -499,6 +513,9 @@ body.menu-expanded button {
 }
 
 /*<------------------------------->Section - Contact <------------------------------->*/
+
+
+
 
 /*<------------------------------->Footer<------------------------------->*/
 
