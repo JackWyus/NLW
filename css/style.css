@@ -8,7 +8,7 @@
 :root {
   font-size: 62.5%; /*1rem = 10px - dessa forma, não existe uma grande necessidade de fazer calculos de conversão*/
 
-  --hue: 170;
+  --hue: 300;
 
   --primary-color: hsl(var(--hue), 100%, 26%);
   --secondary-color: hsl(210, 11%, 15%);
@@ -549,3 +549,57 @@ footer p{
 }
 
 /*<------------------------------->Back to top<------------------------------->*/
+
+
+/*<------------------------------->Responsivo - Desktop<------------------------------->*/
+
+/*O media vai aplicar o conjunto de propriedades quando a largura mínima for  102.4rem = 1024px no dispositivo*/
+@media (min-width:1024px){
+  /*<------------------------------->Geral <------------------------------->*/
+  .wrapper{
+    width:min(112rem, 100%)
+  }
+
+
+
+  /*<------------------------------->Navigation <------------------------------->*/
+
+
+  /*Reset*/
+
+  /*Estamos especificando que dentro da tag nav com id navigation selecione o wrapper dentro dele,pegue todos os elementose*/
+  nav#navigation .wrapper * {
+
+    margin: 0;
+    padding: 0;
+    visibility: initial;
+    display: initial;
+    opacity: initial;
+    flex-direction: initial;
+    position: initial;
+    font-size: initial;
+    font-weight: initial;
+    transform: initial;
+    color: initial;
+    background-color: initial;
+  }
+
+  nav#navigation .close-menu,
+  nav#navigation .open-menu,
+  nav#navigation .menu-social-links{
+    display: none;
+  }
+
+  nav#navigation .menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60%;
+  }
+
+  nav#navigation .menu ul{
+    display: flex;
+    gap: 3.2rem;
+  }
+    
+}
