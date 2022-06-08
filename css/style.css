@@ -8,7 +8,7 @@
 :root {
   font-size: 62.5%; /*1rem = 10px - dessa forma, não existe uma grande necessidade de fazer calculos de conversão*/
 
-  --hue: 20;
+  --hue: 380;
 
   --primary-color: hsl(var(--hue), 100%, 26%);
   --secondary-color: hsl(210, 11%, 15%);
@@ -696,6 +696,10 @@ footer p{
 
   /*<------------------------------->Home <------------------------------->*/
 
+  #home{
+    padding-top: var(--nav-height);
+  }
+
   #home .wrapper{
     grid-template-columns: 60.5rem 1fr;
     grid-template-areas: 'A B' 'C C ';
@@ -704,16 +708,35 @@ footer p{
   #home .col-a{
     grid-area: A;
     text-align: left;
+    align-self: center; /*Pege o elemento da sua própria dimensão A e alinha ele ao centro*/
   }
 
   #home .col-b{
     grid-area: B;
   } 
 
+  #home h1{
+    font-size: 5.2rem;
+  }
+
+  #home .content p{
+    font-size: 1.8rem;
+  }
+
   #home div .stats{
     grid-area: C;
     flex-direction: row;
     padding: 6rem;
+    gap: 0;
+  }
+
+  /*Vamos pegar o stats e procura dentro dele p "stat" que tenha um "stat anterior"*/
+  #home .stats .stat + .stat {
+    border-left: 1px solid var(--primary-color);
+  }
+
+  #home .stats .stat{
+    flex: 1; /*Ele vai fazer um cálculo automático no qual vai alterar a largura de todos os elementos de forma igual*/
   }
   
   #home .button{
