@@ -561,7 +561,6 @@ footer p{
   .wrapper{
     width:min(112rem, 100%);
     display: grid;
-
   }
   /*<------------------------------->Navigation <------------------------------->*/
 
@@ -697,5 +696,32 @@ footer p{
 
   /*<------------------------------->Home <------------------------------->*/
 
+  #home .wrapper{
+    grid-template-columns: 60.5rem 1fr;
+    grid-template-areas: 'A B' 'C C ';
+  }
+
+  #home .col-a{
+    grid-area: A;
+    text-align: left;
+  }
+
+  #home .col-b{
+    grid-area: B;
+  } 
+
+  #home div .stats{
+    grid-area: C;
+    flex-direction: row;
+    padding: 6rem;
+  }
   
+  #home .button{
+    margin: 0;
+  }
+  
+  #home img{
+    width: 42rem;
+    height: 54.7rem;
+  }
 }
