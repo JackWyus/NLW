@@ -305,6 +305,7 @@ body.menu-expanded .logo path {
 
 /*<------------------------------->Ínicio -Header - Home<------------------------------->*/
 #home {
+  padding-block: 0;
   padding-top: calc(
     4.1rem + var(--nav-height)
   ); /*Queremos que o margin-top some com o height do elemento nav para que ocorra uma harmonização de posições devido ao position fixed atráves do calc(),no qual fará sozinho os respectivos cálculos para que isso ocorra.*/
@@ -316,7 +317,7 @@ body.menu-expanded .logo path {
   content: "";
   width: 100%; /*se você usar vw e colocar 100, ele vai sobra para o lado e criar uma scroll e para resolver isso, você usar porcentagem*/
   height: calc(
-    108rem + var(--nav-height)
+    76% + var(--nav-height)
   ); /*Precisamos fazer um cálculo da altura novamente devido alterarmos as dimensões do nav position fixed em relação ao margin-top, o conteúdo foi empurrado para baixo alterando a posição do 108rem - ela vai voltar a ficar no meio da div */
 
   position: absolute;
@@ -558,10 +559,32 @@ footer p{
 /*O media vai aplicar o conjunto de propriedades quando a largura mínima for  102.4rem = 1024px no dispositivo*/
 @media (min-width:1024px){
   /*<------------------------------->Geral <------------------------------->*/
+  body{
+    overflow: auto; /*Tirando a sobreposição da scroll*/
+  }
+ 
   .wrapper{
     width:min(112rem, 100%);
     display: grid;
   }
+
+  .col-a{
+    grid-area: A;
+  }
+
+  .col-b{
+    grid-area: B;
+  }
+
+  section {
+    padding-block: 16rem;
+  }
+
+  section h2{
+    font-size: 4rem;
+    line-height: 5.2rem;
+  }
+
   /*<------------------------------->Navigation <------------------------------->*/
 
   /*Reset*/
@@ -695,6 +718,9 @@ footer p{
   }
 
   /*<------------------------------->Home <------------------------------->*/
+  #home::before{
+    height: calc(96% - var(--nav-height));
+  }
 
   #home{
     padding-top: var(--nav-height);
@@ -706,14 +732,9 @@ footer p{
   }
 
   #home .col-a{
-    grid-area: A;
     text-align: left;
     align-self: center; /*Pege o elemento da sua própria dimensão A e alinha ele ao centro*/
   }
-
-  #home .col-b{
-    grid-area: B;
-  } 
 
   #home h1{
     font-size: 5.2rem;
@@ -747,4 +768,42 @@ footer p{
     width: 42rem;
     height: 54.7rem;
   }
+
+  /*<------------------------------->Services<------------------------------->*/
+  #services h2{
+    width: 47rem;
+    margin-inline: auto;
+  }
+
+  #services .cards{
+    flex-direction: row; /*Deixa um ao lado do outro*/
+    flex-wrap: wrap; /*Tente encaixar as caixas respeitando o tamanho do card - atento se o tamanho do card não é muito grande*/
+    gap: 4rem;
+  }
+  
+  #services .card{
+    width: 30%;
+    flex-grow: 1; /*Preencha os espaço sobrando com seu crescimento*/
+  }
+
+    /*<------------------------------->About<------------------------------->*/
+
+    #about .wrapper{
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: 'B A ';
+      gap: 6.7rem;
+    }
+
+
+    #about .col-a{
+      align-self: center;
+    }
+    #about .content p{
+      margin-bottom: 0;
+    }
+
+    #about img{
+      width: 100%;
+      height: 100%;
+    }
 }
