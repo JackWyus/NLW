@@ -559,13 +559,11 @@ footer p{
 @media (min-width:1024px){
   /*<------------------------------->Geral <------------------------------->*/
   .wrapper{
-    width:min(112rem, 100%)
+    width:min(112rem, 100%);
+    display: grid;
+
   }
-
-
-
   /*<------------------------------->Navigation <------------------------------->*/
-
 
   /*Reset*/
 
@@ -584,6 +582,7 @@ footer p{
     transform: initial;
     color: initial;
     background-color: initial;
+    filter: initial;
   }
 
   nav#navigation .close-menu,
@@ -617,6 +616,13 @@ footer p{
 
   }
 
+  nav#navigation .menu-button-whatsapp:hover{
+    background-color: var(--primary-color);
+    color: var(--color-white);
+    border: none;
+  }
+
+
   nav#navigation .menu ul:nth-of-type(1){
     display: flex;
     gap: 3.2rem;
@@ -632,7 +638,8 @@ footer p{
   nav#navigation .menu li a {
      transition: opacity 2s;
   }
-    
+  
+  nav#navigation .menu li a.active,
   nav#navigation .menu li a:hover{
       opacity: 1;
       font-weight: 700;
@@ -654,28 +661,32 @@ footer p{
   }
 
   /*Quando a estiver no elemento hover, você vai pegar o elemento after*/
+  nav#navigation .menu li a.active::after,
   nav#navigation .menu li a:hover::after{
     width: 100%;
     padding-inline: 0.8rem;
   }
 
+  nav#navigation.scroll .menu ul li a {
+      color: var(--brand-green-light-2);
+  
+      opacity: 0.7;
+  }
+
+  nav#navigation.scroll .menu-button-whatsapp.active,
   nav#navigation.scroll .menu-button-whatsapp:hover {
     background-color: var(--primary-color);
     filter: brightness(1.3);
     border: none;
 }
 
-  nav#navigation.scroll .menu ul li a {
-      color: var(--brand-green-light-2);
- 
-      opacity: 0.7;
-  }
  
   nav#navigation.scroll .menu .menu-button-whatsapp{
       border-color: var(--color-white);
       color: var(--color-white);
   }
 
+  nav#navigation.scroll .menu li a.active,
   nav#navigation.scroll .menu li a:hover{
     opacity: 1;
   }
@@ -683,4 +694,8 @@ footer p{
   nav#navigation.scroll .menu li a::after{
      background-color: var(--color-white);
   }
+
+  /*<------------------------------->Home <------------------------------->*/
+
+  
 }
