@@ -13,7 +13,63 @@ onScroll()
     function onScroll(){
         showNavOnScroll();
         showBackToTopButtonOnScroll();
+        activateMenuAtCurrentSection(home);
     }
+
+
+
+
+
+
+function activateMenuAtCurrentSection(section){
+    /*Linha Alvo/imaginária*/
+    const targetLine = (scrollY + (innerHeight / 2)); 
+
+    //Verificar se a seção passou da linha
+    //Quais dados vou precisar?
+
+    //O topo da seção
+    const sectionTop = section.offsetTop;
+    //A altura da seção
+    const sectionHeight = section.offsetHeight;
+
+    const sectionTopReachOrPassedTargetLine = targetLine >= sectionTop;
+
+    // A seção termina onde?
+    const sectionEndAt = sectionTop + sectionHeight;
+
+    //O final da seção passou a linha alvo
+    const sectionEndPassedTargetLine = sectionEndAt <= targetLine;
+
+    //Limites da seção
+    const sectionBoundaries = sectionEndPassedTargetLine && !sectionEndPassedTargetLine 
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*A Function showNavOnScroll possui a responsabilidade de mostrar o menu expandido ao movimentar o scrolly */
     function showNavOnScroll(){
@@ -55,3 +111,5 @@ ScrollReveal({
     distance: '30px',
     duration: 700,
 }).reveal("#home, #home img, #home .stats, #services, #services header, #services .card, #services .circute-icon, #about, #about header,#about p,#about img, #contact,#contact p, #contact h2,#contact ul,#contact a");
+
+/* Com innerHeight você obtém a altura da ViewPort*/
