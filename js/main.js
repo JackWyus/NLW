@@ -48,30 +48,6 @@ onScroll()
         }
       }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*A Function showNavOnScroll possui a responsabilidade de mostrar o menu expandido ao movimentar o scrolly */
     function showNavOnScroll(){
         if(scrollY > 0){
